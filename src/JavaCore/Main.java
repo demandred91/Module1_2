@@ -69,35 +69,37 @@ public class Main {
         int count = 0;
         System.out.print("Your element was found in: ");
         for (int i = 0; i < arr.length; i++) {
-            if (arr[i] == element){
+            if (arr[i] == element) {
                 System.out.println("\nmas[" + i + "]");
                 count++;
             }
 
-            }
-        if (count == 0){
+        }
+        if (count == 0) {
             System.out.print("NOWHERE\n");
         }
     }
+
     private static void sortInAscending(int arr[]) {
-        for (int i = 1; i < arr.length; i++){
-            for (int j = 1; j < arr.length; j++){
-                if (arr[j] < arr[j-1]){
+        for (int i = 1; i < arr.length; i++) {
+            for (int j = 1; j < arr.length; j++) {
+                if (arr[j] < arr[j - 1]) {
                     int swap = arr[j];
-                    arr[j] = arr [j-1];
-                    arr[j-1] = swap;
+                    arr[j] = arr[j - 1];
+                    arr[j - 1] = swap;
                 }
             }
         }
         System.out.println(Arrays.toString(arr));
     }
-    private static void sortInDescending(int arr[]){
-        for (int i = 1; i < arr.length; i++){
-            for (int j = 1; j < arr.length; j++){
-                if (arr[j] > arr[j-1]){
+
+    private static void sortInDescending(int arr[]) {
+        for (int i = 1; i < arr.length; i++) {
+            for (int j = 1; j < arr.length; j++) {
+                if (arr[j] > arr[j - 1]) {
                     int swap = arr[j];
-                    arr[j] = arr[j-1];
-                    arr[j-1] = swap;
+                    arr[j] = arr[j - 1];
+                    arr[j - 1] = swap;
                 }
             }
         }
